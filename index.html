@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CRUDS</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div id="app">
+		<div id="header">
+			<h1>CRUDS</h1>
+			<h2>Product Management System</h2>
+		</div>
+
+
+		<div id="inputs">
+			<input type="text"  id="title" placeholder="title">
+			<div class= "price">
+				<input type="number" id="price" placeholder="price">
+				<input type="number"  id="taxes" placeholder="taxes">
+				<input type="number"  id="ads" placeholder="ads">
+				<input type="number"  id="discount" placeholder="discount">
+				<small id='total'>324564 </small>
+			</div>
+			<input type="number"  id="count" placeholder="count">
+			<input type="text"  id="category" placeholder="category">
+			<button id="create">Create</button>
+		</div>
+		<div id="outputs">
+			<div class="searchBlock">
+				<input type="text" id="search" placeholder="search">
+<div class="btnSearch">
+<button id="searchTitle">Search by title</button>
+<button id='searchCategory'>Search by category</button>
+</div>
+			</div>
+		</div>
+		<table>
+			<tr>
+					<th>Id</th>
+					<th>Title</th>
+					<th>Price</th>
+					<th>Taxes</th>
+					<th>Ads</th>
+					<th>Discount</th>
+					<th>Total</th>
+					<th>Category</th>
+					<th>Update</th>
+					<th>Delete</th>
+			</tr>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</div>
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>
