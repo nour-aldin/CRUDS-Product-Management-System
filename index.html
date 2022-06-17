@@ -4,6 +4,7 @@
 <head>
 	<title>CRUDS</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="./src/styles.css">
 </head>
 
 <body>
@@ -17,11 +18,11 @@
 		<div id="inputs">
 			<input type="text"  id="title" placeholder="title">
 			<div class= "price">
-				<input type="number" id="price" placeholder="price">
-				<input type="number"  id="taxes" placeholder="taxes">
-				<input type="number"  id="ads" placeholder="ads">
-				<input type="number"  id="discount" placeholder="discount">
-				<small id='total'>324564 </small>
+				<input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+				<input onkeyup="getTotal()" type="number"  id="taxes" placeholder="taxes">
+				<input onkeyup="getTotal()" type="number"  id="ads" placeholder="ads">
+				<input onkeyup="getTotal()" type="number"  id="discount" placeholder="discount">
+				<small id='total'> </small>
 			</div>
 			<input type="number"  id="count" placeholder="count">
 			<input type="text"  id="category" placeholder="category">
@@ -29,11 +30,12 @@
 		</div>
 		<div id="outputs">
 			<div class="searchBlock">
-				<input type="text" id="search" placeholder="search">
+				<input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
 <div class="btnSearch">
-<button id="searchTitle">Search by title</button>
-<button id='searchCategory'>Search by category</button>
+<button onclick="getSearchMood(this.id)" id="searchTitle">Search by title</button>
+<button onclick="getSearchMood(this.id)" id='searchCategory'>Search by category</button>
 </div>
+<div id="deleteAll"></div>
 			</div>
 		</div>
 		<table>
@@ -49,7 +51,7 @@
 					<th>Update</th>
 					<th>Delete</th>
 			</tr>
-			<tbody>
+			<tbody id="tbody">
 				
 			</tbody>
 		</table>
